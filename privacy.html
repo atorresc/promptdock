@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Privacy Policy — PromptDock</title>
+<meta name="description" content="PromptDock privacy policy. No data collection, no tracking, no analytics." />
+<link rel="canonical" href="https://atorresc.github.io/promptdock/privacy.html" />
+<style>
+  :root{
+    --ink:#14161b; --ink-2:#5a6270; --line:#e5e7ec; --bg:#fff; --accent:#2f6df6; --wash:#f6f7fa;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{ --ink:#e9eaee; --ink-2:#98a0ac; --line:#2c313b; --bg:#15181d; --wash:#1c2027; }
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;background:var(--bg);color:var(--ink);
+    font:16px/1.65 ui-sans-serif,-apple-system,"Segoe UI",Roboto,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:660px;margin:0 auto;padding:0 24px 60px}
+  header{padding:28px 0;display:flex;align-items:center;justify-content:space-between}
+  .logo{display:flex;align-items:center;gap:9px;font-weight:700;text-decoration:none;color:var(--ink)}
+  .mark{width:26px;height:26px;border-radius:7px;background:var(--accent);
+        display:grid;place-items:center;color:#fff;font-size:13px;font-weight:800}
+  nav a{color:var(--ink-2);text-decoration:none;font-size:14px}
+  h1{font-size:32px;letter-spacing:-.022em;margin:32px 0 6px;font-weight:740}
+  .date{color:var(--ink-2);font-size:14px;margin:0 0 30px}
+  h2{font-size:18px;margin:34px 0 8px;font-weight:680;letter-spacing:-.01em}
+  p,li{color:var(--ink-2);font-size:15px}
+  strong{color:var(--ink)}
+  .callout{
+    background:var(--wash);border:1px solid var(--line);border-radius:12px;
+    padding:16px 18px;margin:22px 0
+  }
+  .callout p{margin:0;color:var(--ink)}
+  table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14.5px}
+  th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-2);font-weight:640}
+  td{color:var(--ink-2)}
+  td:first-child{color:var(--ink);font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px}
+  a{color:var(--accent)}
+  footer{margin-top:48px;padding-top:20px;border-top:1px solid var(--line);font-size:13.5px;color:var(--ink-2)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <a class="logo" href="index.html"><span class="mark">P</span> PromptDock</a>
+    <nav><a href="index.html">← Back</a></nav>
+  </header>
+
+  <h1>Privacy Policy</h1>
+  <p class="date">Last updated: 30 July 2026</p>
+
+  <div class="callout">
+    <p><strong>The short version:</strong> PromptDock does not collect, transmit, store or
+    sell any personal data. Everything you save stays in your own browser.</p>
+  </div>
+
+  <h2>What the extension stores</h2>
+  <p>
+    Your prompt library — titles, prompt text, tags and a local usage counter — is saved
+    using the browser's <code>chrome.storage.local</code> API. This data lives on your
+    device. It is never uploaded, synchronised or transmitted to us or to anyone else.
+  </p>
+  <p>
+    You can export your entire library to a JSON file at any time, or delete all of it by
+    removing the extension.
+  </p>
+
+  <h2>What the extension reads</h2>
+  <p>
+    PromptDock injects a prompt palette into supported AI chat sites and writes your
+    selected prompt text into the page's message box. It does <strong>not</strong> read,
+    record or transmit your conversations, your messages, or any other page content.
+  </p>
+
+  <h2>Payments</h2>
+  <p>
+    Paid subscriptions are handled by ExtensionPay, which processes payments through
+    Stripe. When you subscribe, ExtensionPay stores your email address and subscription
+    status in order to unlock paid features. We never receive or store your payment card
+    details.
+  </p>
+  <ul>
+    <li><a href="https://extensionpay.com/privacy">ExtensionPay privacy policy</a></li>
+    <li><a href="https://stripe.com/privacy">Stripe privacy policy</a></li>
+  </ul>
+
+  <h2>Analytics and tracking</h2>
+  <p>None. The extension contains no analytics SDK, no telemetry and no advertising code.</p>
+
+  <h2>Permissions</h2>
+  <table>
+    <tr><th>Permission</th><th>Why it is needed</th></tr>
+    <tr><td>storage</td><td>Save your prompt library locally on your device</td></tr>
+    <tr><td>extensionpay.com</td><td>Verify subscription status for paid features</td></tr>
+    <tr><td>content scripts</td><td>Render the palette and insert your chosen prompt into the page</td></tr>
+  </table>
+
+  <h2>Children</h2>
+  <p>PromptDock is not directed at children under 13 and collects no data from anyone.</p>
+
+  <h2>Changes</h2>
+  <p>
+    If this policy changes, the updated version will be posted at this URL with a new
+    "last updated" date.
+  </p>
+
+  <h2>Contact</h2>
+  <p>Questions about this policy: <a href="mailto:argelistorres@gmail.com">argelistorres@gmail.com</a></p>
+
+  <footer>© 2026 PromptDock</footer>
+
+</div>
+</body>
+</html>

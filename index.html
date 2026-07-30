@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>PromptDock — Prompt manager for ChatGPT, Claude & Gemini</title>
+<meta name="description" content="Save, organize and instantly insert your best AI prompts across ChatGPT, Claude, Gemini, Perplexity and Grok. No account, no server, all local." />
+<link rel="canonical" href="https://atorresc.github.io/promptdock/" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://atorresc.github.io/promptdock/" />
+<meta property="og:title" content="PromptDock — Prompt manager for ChatGPT, Claude & Gemini" />
+<meta property="og:description" content="Save a prompt once, pull it up in two keystrokes — in any model. Local-first, no account." />
+<style>
+  :root{
+    --ink:#14161b; --ink-2:#5a6270; --line:#e5e7ec; --bg:#fff;
+    --accent:#2f6df6; --wash:#f6f7fa;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{ --ink:#e9eaee; --ink-2:#98a0ac; --line:#2c313b; --bg:#15181d; --wash:#1c2027; }
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font:16px/1.6 ui-sans-serif,-apple-system,"Segoe UI",Roboto,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:720px;margin:0 auto;padding:0 24px}
+  header{padding:28px 0;display:flex;align-items:center;justify-content:space-between}
+  .logo{display:flex;align-items:center;gap:9px;font-weight:700;letter-spacing:-.01em}
+  .mark{
+    width:26px;height:26px;border-radius:7px;background:var(--accent);
+    display:grid;place-items:center;color:#fff;font-size:13px;font-weight:800
+  }
+  nav a{color:var(--ink-2);text-decoration:none;font-size:14px;margin-left:18px}
+  nav a:hover{color:var(--ink)}
+
+  .hero{padding:52px 0 40px}
+  h1{
+    font-size:clamp(30px,5.4vw,44px); line-height:1.12; letter-spacing:-.025em;
+    margin:0 0 16px; font-weight:760;
+  }
+  .lede{font-size:18px;color:var(--ink-2);margin:0 0 28px;max-width:56ch}
+  .cta{
+    display:inline-block;background:var(--accent);color:#fff;text-decoration:none;
+    font-weight:640;font-size:15px;padding:12px 22px;border-radius:10px;
+  }
+  .cta:hover{filter:brightness(1.07)}
+  .cta-note{font-size:13.5px;color:var(--ink-2);margin-top:12px}
+
+  .demo{
+    margin:44px 0; border:1px solid var(--line); border-radius:14px;
+    background:var(--wash); padding:20px; font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:13.5px; color:var(--ink-2);
+  }
+  .demo b{color:var(--ink);font-weight:600}
+  .demo .k{
+    display:inline-block;border:1px solid var(--line);background:var(--bg);
+    border-radius:5px;padding:1px 7px;font-size:12px;color:var(--ink)
+  }
+
+  h2{font-size:22px;letter-spacing:-.015em;margin:44px 0 14px;font-weight:700}
+  .grid{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin:20px 0}
+  .card h3{font-size:15.5px;margin:0 0 5px;font-weight:660}
+  .card p{margin:0;font-size:14.5px;color:var(--ink-2)}
+
+  table{width:100%;border-collapse:collapse;margin:16px 0;font-size:14.5px}
+  th,td{text-align:left;padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-2);font-weight:640}
+  td:first-child{color:var(--ink-2)}
+
+  .sites{font-size:14.5px;color:var(--ink-2);line-height:2}
+  .sites span{
+    border:1px solid var(--line);border-radius:20px;padding:4px 12px;margin-right:6px;
+    white-space:nowrap;color:var(--ink)
+  }
+
+  footer{
+    margin-top:56px;padding:22px 0 40px;border-top:1px solid var(--line);
+    font-size:13.5px;color:var(--ink-2);display:flex;gap:18px;flex-wrap:wrap
+  }
+  footer a{color:var(--ink-2)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="logo"><span class="mark">P</span> PromptDock</div>
+    <nav>
+      <a href="#pricing">Pricing</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Stop rewriting the same prompts.</h1>
+    <p class="lede">
+      A fast, local-first prompt library that lives inside the AI chat you already use.
+      Save a prompt once, pull it up in two keystrokes — in any model.
+    </p>
+    <a class="cta" href="#" id="store-link">Add to Chrome — free</a>
+    <div class="cta-note">Free forever for 15 prompts. No account, no sign-up.</div>
+  </section>
+
+  <div class="demo">
+    <div>press <span class="k">Ctrl</span> <span class="k">Shift</span> <span class="k">Space</span> &nbsp;— or type <span class="k">//</span> in the message box</div>
+    <div style="margin-top:14px">
+      &gt; senior code<br />
+      &nbsp;&nbsp;<b>Senior code review</b> &nbsp;·&nbsp; Review this {{language}} code as a senior engineer…<br />
+      &nbsp;&nbsp;Critique my draft &nbsp;·&nbsp; Review the text below as a demanding editor…
+    </div>
+    <div style="margin-top:14px">↵ &nbsp;inserts it straight into the composer</div>
+  </div>
+
+  <h2>Works everywhere you chat</h2>
+  <p class="sites">
+    <span>ChatGPT</span><span>Claude</span><span>Gemini</span><span>AI Studio</span><span>Perplexity</span><span>Grok</span><span>Mistral</span><span>DeepSeek</span>
+  </p>
+  <p style="color:var(--ink-2);font-size:14.5px">
+    Most prompt managers only support ChatGPT. This one follows you across every model
+    you use, with a single library.
+  </p>
+
+  <h2>What makes it different</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Nothing leaves your browser</h3>
+      <p>No account, no sign-up, no server. Prompts live in local storage and are never transmitted.</p>
+    </div>
+    <div class="card">
+      <h3>Fill-in-the-blank prompts</h3>
+      <p>Write <code>{{placeholders}}</code> anywhere. PromptDock asks for the values right before inserting.</p>
+    </div>
+    <div class="card">
+      <h3>No lock-in</h3>
+      <p>Export your whole library to JSON at any time. There is nothing holding you hostage.</p>
+    </div>
+  </div>
+
+  <h2 id="pricing">Pricing</h2>
+  <table>
+    <tr><th>Free forever</th><th>Pro — $4.99/mo or $29/yr</th></tr>
+    <tr>
+      <td>15 prompts<br />Full search and one-keystroke insert<br />Import and export</td>
+      <td>Unlimited prompts<br />{{Variables}} with a fill-in form<br />7-day free trial, cancel anytime</td>
+    </tr>
+  </table>
+
+  <h2>Permissions, plainly</h2>
+  <p style="color:var(--ink-2);font-size:14.5px">
+    PromptDock requests one permission: <code>storage</code>, to keep your prompts on your
+    own device. It does not read your conversations, does not track you, and ships no
+    analytics of any kind.
+  </p>
+
+  <footer>
+    <span>© 2026 PromptDock</span>
+    <a href="privacy.html">Privacy policy</a>
+    <a href="mailto:argelistorres@gmail.com">Support</a>
+  </footer>
+
+</div>
+</body>
+</html>
