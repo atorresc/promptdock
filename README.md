@@ -20,8 +20,8 @@ local storage and can be exported to JSON at any time.
 
 ## Pricing
 
-Free forever for 15 prompts. Pro is $4.99/month or $29/year for unlimited prompts and
-variables, with a 7-day free trial.
+Free forever for 10 prompts, variables included. Pro is $4.99/month or $29/year for
+unlimited prompts, with a 7-day free trial.
 
 ## Support
 
